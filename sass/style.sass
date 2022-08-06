@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap')
+
+*
+    font-family: 'Roboto', sans-serif
+
+#hey
+    background: #5E38EA
+
+.containers
+    background: #13DCD6
+    margin-top: 10px
+    text-align: center
+    width: fit-content
+    padding: 9px 8px 7px 10px
+    position: absolute
+    left: 50%
+    transform: translate(-50%, 0%)
+    border-radius: 8px
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+    h1
+        letter-spacing: 7px
+        text-transform: uppercase
+        color: white
+    span
+        letter-spacing: 10px
+        font-size: 2rem    
+
+#info
+    text-align: center
+    padding-top: 10rem
+
+#note
+    font-size: 15px
+    color: #808B96
+    text-align: center
+    padding-top: 10px
+    a
+        text-decoration: none
+        color: #3498DB
+    a:hover
+        text-decoration: underline
+
+.confiner
+    display: grid
+    grid-gap: 1rem
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))
+    .view
+        width: 432px
+        height: 288px
+
+    .prediction-container
+        display: flex
+        margin: 50px
+        flex-direction: column
+        align-items: center
+        .current-view
+            text-align: center
+        #prediction
+            text-align: center
+            margin-top: 30px
+        .😎
+            font-size: 35px
+    button
+        border: none
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px
+        background: orange
+        padding: 10px 20px
+        margin-top: 10px
+        margin-bottom: 20px
+        border-radius: 5px
+        transition: .3s
+    button:hover
+        color: #273746
+        background: #17A589
+        transform: translateY(-20%)
+
+    .useless
+        display: flex
+        flex-direction: column
+        align-items: center
+        div:nth-child(2)
+            align-self: center
+    .current-view
+        background: #210070
+        width: fit-content
+        padding: 10px 15px
+        border-radius: 5px
+        color: #7ad9c4
+        cursor: pointer
+        margin-bottom: 10px
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px
+
+    #snapshot
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+    
+    
+
+@media screen and ( max-width: 567px )
+    .prediction-container::after
+        content: ''
+        padding: 2px 100%
+        background: black
+        margin-top: 30px 
+    .prediction-container::before
+        content: ''
+        padding: 2px 100%
+        background: black
+        margin-bottom: 30px 
+
+    

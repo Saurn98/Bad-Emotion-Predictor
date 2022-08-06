@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js" integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src=" https://unpkg.com/ml5@0.4.3/dist/ml5.min.js "></script>
+    <title>Document</title>
+</head>
+<body id="hey">
+    <div class="containers">
+        <h1 class="heading">Emotion to Emoji</h1>
+        <span class="icons">😂</span>
+        <span class="icons">😁</span>
+        <span class="icons">😎</span>
+        <span class="icons">🤬</span>
+        <span class="icons">🙂</span>
+    </div>
+    <p id="info">Take your selfie to generate Emoji</p>
+    <p id="note" style="color:yellow">Are You Happy?</p>
+    <p id="note" style="color:black">Are You Sad?</p>
+    <p id="note" style="color:red">Are You Angry?</p>
+    
+    <div class="confiner">
+        <div id="webcam-container" class="useless">
+            <div class="current-view">
+                Webcam View - 
+            </div>
+            <div id="camera" class="view" style="background-image: url('images/Loading_icon.gif')">
+                
+            </div>
+            <button onclick="take_snapshot()">Capture Image</button>
+        </div>
+        <div class="prediction-container">
+            <div class="current-view">Prediction 1 - </div>
+            <div id="prediction-1">The first prediction will be shown here</div>
+            <div id="prediction-1-emoji" class="😎"></div>
+            <br>
+            <div class="current-view">Prediction 2 - </div>
+            <div id="prediction-2">The second prediction will be shown here</div>
+            <div id="prediction-2-emoji" class="😎"></div>
+            <img id="load" style="display: none" src="images/Loading_icon.gif" alt="">
+        </div>
+        <div id="snapshot-container" class="useless">
+            <div class="current-view">
+                Snapshot - 
+            </div>
+            <div id="snapshot" class="view">
+
+            </div>
+            <button onclick="check()">Predict Emotion</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
